@@ -35,6 +35,17 @@
         <img src="assets/img/logo1.png" alt="Brin de vanille">
       </div>
     </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+    <nav class="nav justify-content-center"> <!-- alignement centre -->
+      <a class="nav-link active" href="#">Accueil</a>
+      <a class="nav-link" href="#">A propos</a>
+      <a class="nav-link" href="#">Services</a>
+      <a class="nav-link" href="#">Contact</a>
+    </nav>
+
+  </div>
+</nav>
   </header>
 </html>
    
