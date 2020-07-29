@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'minist';
+    src: url(../scss/fonts/minist.ttf);
+}
+@font-face {
+    font-family: 'ghost';
+    src: url(../scss/fonts/ghost.ttf);
+}
+@font-face {
+    font-family: 'goth';
+    src: url(../scss/fonts/goth.ttf);
+}
+@font-face {
+    font-family: 'shadow';
+    src: url(../scss/fonts/shadow.ttf);
+}
+$font-title: minist;
+$default-font: Ubuntu; 

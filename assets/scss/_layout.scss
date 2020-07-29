@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    background-color:#E5E2DC;
+    background-image: url(../img/logosite5.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: bottom;
+    font-family: Arial;
+    width: 100%;
+
+    .instruments{
+        text-align: center;
+        font-family: minist;
+        margin-top: 5em;
+        padding-bottom: 5em;
+    }
+    a:hover{
+        color: black;
+    }
+    a { 
+        color:black;
+        text-decoration:none;
+        
+    }
+
+    .bass{
+        margin-left: 3em;
+    }
+
+    .description{
+        font-family: ghost;
+        text-align: center;
+        margin-top: 5em;
+    }
+    .article{
+        background-color:#CCC5B8;
+        opacity: 0.6;
+        border-radius: 10px;
+        margin-bottom: 2em;
+
+    }
+    .titre-article{
+        text-align: center;
+        font-family: shadow;
+        font-size: 3em;
+    }
+    .contenu-article{
+        text-align: center;
+        font-family: shadow;
+        font-size: 2em;
+    }
+    .telechargement{
+       text-align: center;
+        
+    }
+}

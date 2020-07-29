@@ -1,0 +1,13 @@
+//base imports
+@import "variables/fonts";
+@import "helpers/mixins";
+
+// components imports
+@import "header";
+@import "content";
+@import "footer";
+@import "modal";
+@import "table";
+
+//layout imports
+@import "layout";
