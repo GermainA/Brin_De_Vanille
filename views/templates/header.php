@@ -30,22 +30,22 @@
   </head>
 
   <header>
-    <div class="container">
-      <div class="row">
-        <img src="assets/img/logo1.png" alt="Brin de vanille">
-      </div>
+    <div class="d-flex justify-content-center navbar">
+        <img src="<?php echo SITE_DIR ?>assets/img/logo1.png" alt="Brin de vanille">
+      
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  
-    <nav class="nav justify-content-center"> <!-- alignement centre -->
-      <a class="nav-link active" href="#">Accueil</a>
-      <a class="nav-link" href="#">A propos</a>
-      <a class="nav-link" href="#">Services</a>
-      <a class="nav-link" href="#">Contact</a>
-    </nav>
+    
+    <div class="d-flex justify-content-center flex-column flex-sm-row navbar2">
+      <div class="menu text-center"><a href="<?php echo SITE_DIR ?>">Accueil</a></div>
+      <div class="menu text-center"><a href="<?php echo SITE_DIR . "Realisations/"?>">Pâtisseries</a></div>
+      <div class="menu text-center"> <a href="<?php echo SITE_DIR . "Contact/commander"?>">Commander</a></div>
+      <div class="menu text-center"><a href="<?php echo SITE_DIR . "Apropos/"?>">A propos</a></div>
+      <div class="menu text-center"><a href="<?php echo SITE_DIR . "Contact/contact"?>">Contact</a></div>
+    </div>
 
-  </div>
-</nav>
   </header>
+
+
+  
 </html>
    

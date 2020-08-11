@@ -1,8 +1,34 @@
 header {
-    background-color:#F9FFC8;
+    
         img{
             max-width: 35%;
             max-height: 35%;
             margin:auto;
         } 
-}
+
+        .menu{
+            margin: 10px;
+            font-family: 'Ubuntu';
+
+            a{
+                color: black;
+            }
+            
+
+            a:hover{
+                    font-size: 1.1em;
+                    color: #cc7076;
+                
+            }
+
+        }
+       
+        .navbar {
+            background-color: #F9FFC8;
+        }
+
+        .navbar2 {
+            background-color: #F9FFC8;
+            opacity: 0.5; 
+        }
+    }

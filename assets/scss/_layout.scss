@@ -1,57 +1,52 @@
-body {
-    margin: 0;
-    background-color:#E5E2DC;
-    background-image: url(../img/logosite5.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-    background-position: bottom;
-    font-family: Arial;
-    width: 100%;
+.caroussel {
+    #slider {
+      height: 50vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-    .instruments{
-        text-align: center;
-        font-family: minist;
-        margin-top: 5em;
-        padding-bottom: 5em;
-    }
-    a:hover{
-        color: black;
-    }
-    a { 
-        color:black;
-        text-decoration:none;
-        
-    }
+      .slide {
+        height: inherit;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        transition: opacity 0.5s;
+        opacity: 0;
 
-    .bass{
-        margin-left: 3em;
-    }
 
-    .description{
-        font-family: ghost;
-        text-align: center;
-        margin-top: 5em;
-    }
-    .article{
-        background-color:#CCC5B8;
-        opacity: 0.6;
-        border-radius: 10px;
-        margin-bottom: 2em;
+        img {
+          position: absolute;
+          width: 100%;
+        }
 
-    }
-    .titre-article{
-        text-align: center;
-        font-family: shadow;
-        font-size: 3em;
-    }
-    .contenu-article{
-        text-align: center;
-        font-family: shadow;
-        font-size: 2em;
-    }
-    .telechargement{
-       text-align: center;
-        
+        h1,
+        h2 {
+          position: relative;
+          background-color: rgba(255, 255, 255, 0.5);
+          color: black;
+          padding: 1rem;
+        }
+
+        p {
+          position: relative;
+          background-color: rgba(214, 182, 182, 0.5);
+          color: white;
+          padding: 1rem;
+        }
+      }
+
+      .sliderbutton {
+        position: relative;
+        z-index: 99;
+        cursor: pointer;
+      }
     }
 }
