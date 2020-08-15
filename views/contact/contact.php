@@ -1,25 +1,77 @@
-<?php require('views/templates/header.php');?>
+<?php require('views/templates/head.php'); ?>
+<?php require('views/templates/header.php'); ?>
+
+<div class="container">
+
+      <h1>Contact</h1>
+      <img class="en-tete" src="<?php echo SITE_DIR ?>assets/img/fleur2.jpg" alt="Fleur">
+
+</div>
 
 <div class="container">
   <div class="row contact">
-    <div class="col-sm liens">
-      <h1>Pour nous contacter et suivre nos actualités sur les réseaux sociaux :</h1>
+    <div class="col">
+      <div class="titrecontact">
+        <p>Pour nous contacter et suivre nos actualités sur les réseaux sociaux :</p>
+      </div>
+      <div class="liens">
+        <p><i class="fas fa-phone"></i> Téléphone : 07 49 38 95 10 </p>
+        <p><i class="fab fa-instagram"></i> Instagram : <a href="https://www.instagram.com/brin_de_vanille_patisserie/" target="_blank">brin_de_vanille_patisserie</a> </p>
+        <p><i class="fab fa-facebook"></i> Facebook : <a href="https://www.facebook.com/brindevanillepatisserie" target="_blank">Brin de vanille</a></p>
+        <p><i class="far fa-envelope"></i> Email : <a href="mailto:brindevanillepatisserie@gmail.com">brindevanillepatisserie@gmail.com</a></p>
+      </div>
+        <div class="titrecontact">
+          <p>Nos horaires</p>
+        </div>
+        
+        <div class="liens">
+          <p>Du mardi au dimanche de 09h00 à 17h00</p>
+        </div>
 
-      <p><img src="<?php echo SITE_DIR ?>assets/img/telephone.png" alt="Tartes" class="image" >Téléphone : 07 49 38 95 10 </p>
-      <p><img src="<?php echo SITE_DIR ?>assets/img/instagram.png" alt="Tartes" class="image" >Instagram : <a href="https://www.instagram.com/brin_de_vanille_patisserie/" target="_blank">brin_de_vanille_patisserie</a> </p>
-      <p><img src="<?php echo SITE_DIR ?>assets/img/facebook.png" alt="Tartes" class="image" >Facebook : <a href="https://www.facebook.com/brindevanillepatisserie" target="_blank">Brin de vanille</a></p>
-      <p><img src="<?php echo SITE_DIR ?>assets/img/gmail.png" alt="Tartes" class="image" >Email : <a href="mailto:brindevanillepatisserie@gmail.com">brindevanillepatisserie@gmail.com</a></p>
+      </div>
 
-      <h1>Nos horaires :</h1>
+      <div class="col">
 
-      <p>Du mardi au dimanche de 09h00 à 17h00</p>
+        <div class="titrecontact">
+          <p>Pour une commande, une demande particulière :</p>
+        </div>
+
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="nom">Nom</label>
+              <input type="email" class="form-control" id="nom" placeholder="">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="prenom">Prénom</label>
+              <input type="password" class="form-control" id="prenom" placeholder="">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="telephone">Téléphone</label>
+              <input type="password" class="form-control" id="telephone" placeholder="">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-light">Envoyez</button>
+        </form>
+
+      </div>
     </div>
-    <div class="col-sm">
-    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88855.54306082526!2d0.8151244843393267!3d45.89659847349226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47feeadaef87b0c9%3A0x8b265b0dc126d53e!2s87200%20Saint-Junien!5e0!3m2!1sfr!2sfr!4v1597074047894!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </div>
-   
+
   </div>
-</div>
+  <div class="map">
+  
+  </div>
+  <script src="https://kit.fontawesome.com/be20f2a41d.js" crossorigin="anonymous"></script>
 
-    
-<?php require('views/templates/footer.php');?>
+  <?php require('views/templates/footer.php'); ?>

@@ -1,7 +1,4 @@
-# CDA Hotel Nice
-
-Application facilitant la gestion par les employés de *l'hotel CDA basé à Nice*, ainsi que la prise de contact, l'accès à l'hotel, et la réservation pour tout client potentiel.
-
+# Brin de Vanille
 
 # Pré-requis
 

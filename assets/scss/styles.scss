@@ -1,16 +1,54 @@
 //base imports
 @import "variables/fonts";
 @import "helpers/mixins";
+@import "variables/colors";
+
 
 // components imports
-@import "header";
-@import "realisations";
-@import "footer";
-@import "modal";
-@import "table";
-@import "commander";
-@import "contact";
+@import "pages/header";
+@import "pages/realisations";
+@import "pages/footer";
+@import "pages/contact";
+@import "pages/login";
+@import "pages/table";
+@import "pages/accueil";
+@import "pages/admin";
+@import "pages/forms";
 
 
-//layout imports
-@import "layout";
+
+body{
+    
+    height: 100vh;
+    display: flex;
+    // justify-content: space-between; //
+    flex-direction: column;
+
+}
+
+.container {
+    padding: 0;
+
+}
+h1{
+    
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: 'Sacramento';
+}
+
+.en-tete {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    margin-bottom: 20px;
+
+} 
+
+
+
+
+
