@@ -2,10 +2,11 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-define('SITE_DIR','sites/http://brindevanille.lescadev.fr');
+define('SITE_DIR','http://brindevanille.lescadev.fr/');
 $_SERVER['REQUEST_URI'] = substr($_SERVER ['REQUEST_URI'], 1);
 
-$requestUri = str_replace(SITE_DIR, '', $_SERVER['REQUEST_URI']);
+$requestUri = str_replace('/http://brindevanille.lescadev.fr/', '', $_SERVER['REQUEST_URI']);
+
 
 $requestParams = explode('/', $requestUri);
 
