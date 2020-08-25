@@ -1,3 +1,4 @@
+<?php require('views/admin/templates/headback.php');?>
 <?php require('views/admin/templates/header.php');?>   
 <main class="admin">
   <div class="h2">

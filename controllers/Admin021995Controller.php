@@ -27,7 +27,7 @@ function indexAction()
             $_SESSION['mail'] = $adminexist['mail'];
             header('Location:' . SITE_DIR . 'admin021995/content');
         } else {
-            $erreur = 'Mauvais mots de passe';
+            $erreur = 'Mauvais mot de passe';
         }
     }
 
@@ -52,6 +52,13 @@ function inscriptionAction()
 function contentAction()
 {
     isConnected();
+    $Bdd = new Bdd();
+    $connection = $Bdd->getConnection();
+    $Patisserie = new Patisserie();
+    $patisseries = $Patisserie -> recupPatisserie ($connection);
+    $Categorie = new Categorie ();
+    
+
     require('views/admin/content.php');
 }
 
@@ -70,17 +77,83 @@ function addcontentAction()
         $target_dir = "assets/imgclient/";
         $target_file = $target_dir . basename($_FILES['doc']["name"]);
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-        if ($imageFileType == "jpg" or $imageFileType == "png" or $imageFileType == "jpeg" and $_FILES["photoplat"]["size"] > 1000000) {
+        if ($imageFileType == "jpg" or $imageFileType == "png" or $imageFileType == "jpeg" and $_FILES["doc"]["size"] > 1000000) {
             $Patisserie = new Patisserie();
+            $Categorie = new Categorie();
             $Patisserie -> ajoutPatisserie($connection , $_SESSION['id'] , $titre , $tarif , $target_file , $description);
             move_uploaded_file($_FILES["doc"]["tmp_name"], $target_file);
+            $infoPatisserie = $Patisserie -> recupIdPatisserie ($connection, $titre, $description);
+            $infoPatisserie = $infoPatisserie -> fetch();
+            $infoCategorie = $Categorie -> selectIdCategorie ($connection, $categorie);
+            $infoCategorie = $infoCategorie -> fetch();
+            $Categorie -> ajoutCategorie ($connection, $infoCategorie ['id'], $infoPatisserie ['id']);
+            $reussite = 'Votre pâtisserie a bien été ajouté';
         }
-    }
+    } 
+      
     require('views/admin/addcontent.php');
 }
 
 function editcontentAction()
 {
     isConnected();
+    $requestUri    = str_replace(SITE_DIR, '', $_SERVER['REQUEST_URI']);
+    $requestParams = explode('/', $requestUri);
+    $patisserieid  = isset($requestParams[2]) ? $requestParams[2] : null;
+    $Bdd = new Bdd();
+    $connection = $Bdd->getConnection();
+    $Patisserie = new Patisserie();
+    $infoPatisserie = $Patisserie -> recupPatisserie2 ($connection, $patisserieid);
+    $infoPatisserie = $infoPatisserie -> fetch();
+    $Categorie = new Categorie();
+    $infoCategorie = $Categorie -> selectIdCategorie2 ($connection, $patisserieid);
+    $infoCategorie = $infoCategorie -> fetch();
+    $infoCategorie = $Categorie -> selectNomCategorie ($connection, $infoCategorie ['id_categorie']);
+    $infoCategorie = $infoCategorie -> fetch();
+
+    if (isset ($_POST ['updatecontent'])) {
+        
+        if (!empty ($_POST ['titre']) and !empty ($_POST ['content']) and !empty ($_POST ['tarif']) ) {
+ 
+        $titre = $_POST ['titre'];
+        $tarif = $_POST ['tarif'];
+        $description = $_POST ['content'];
+        $Patisserie -> updatepatisserie ($connection, $patisserieid, $titre, $tarif, $description); 
+        
+
+        }
+
+        if (!empty ($_POST ['categorie'])) {
+           $idcategorie = $Categorie -> selectIdCategorie ($connection, $_POST ['categorie']);
+           $idcategorie = $idcategorie -> fetch();
+           $Categorie -> updateCategorie ($connection, $patisserieid, $idcategorie['id']);
+           
+        }
+        
+            if (!empty ($_FILES['doc']["name"])) {
+                unlink($infoPatisserie ['image']);
+                $target_dir = "assets/imgclient/";
+                $target_file = $target_dir . basename($_FILES['doc']["name"]);
+                $Patisserie -> updateimage ($connection, $patisserieid, $target_file);
+                move_uploaded_file($_FILES["doc"]["tmp_name"], $target_file);
+        }
+
+        header('Location:' . SITE_DIR . 'admin021995/editcontent/' . $patisserieid);
+    }
+
+
     require('views/admin/editcontent.php');
+}
+
+function deleteAction () {
+
+    $requestUri    = str_replace(SITE_DIR, '', $_SERVER['REQUEST_URI']);
+        $requestParams = explode('/', $requestUri);
+        $patisserieid     = isset($requestParams[2]) ? $requestParams[2] : null;
+    $Bdd = new Bdd();
+    $connection = $Bdd->getConnection();
+    $Patisserie = new Patisserie();
+    $Patisserie -> deletePatisserie ($connection, $patisserieid);
+    header('Location:' . SITE_DIR . 'admin021995/content');
+
 }

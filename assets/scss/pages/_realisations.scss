@@ -9,10 +9,25 @@
         padding : 20px;
         border-style: ridge;
         border-width:2px;
+        margin-bottom: 5px;
     }
     
     a{
         color: $rose2;
+        font-family: 'Ubuntu';
+    }
+
+    a:hover {
+        font-size: 1.1em;
+        color: $rose2;
+    }
+
+    p {
+        font-family: 'Ubuntu';
+    }
+
+    .card-title {
+        font-size: 17px;
     }
 }
 

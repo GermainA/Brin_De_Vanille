@@ -1,3 +1,4 @@
+<?php require('views/admin/templates/headback.php');?>
 <?php require('views/admin/templates/header.php');?> 
 
 <html>
@@ -15,7 +16,7 @@
 
                             <div class="form-row">
                                 <label for="titre">Titre</label>
-                                <input name="titre" type="text" class="titre" id="titre">
+                                <input name="titre" type="text" class="titre" id="titre" value="<?php echo $infoPatisserie ['titre'] ?>">
                             </div>
 
                             <div class="form-row">
@@ -26,25 +27,27 @@
                                 <option>Tartes</option>
                                 <option>Entremets</option> 
                                 </select>
+                                <div>La catégorie actuelle est : <?php echo $infoCategorie ['nom'] ?></div>
                             </div>
                         
                             <div class="form-row">
                                 <label for="exampleFormControlFile1">Ajoutez une image</label>
                                 <input type="file" class="form-control-file" id="doc" name="doc">
+                                <div>L'image actuelle est : <?php echo $infoPatisserie ['image'] ?></div>
                             </div>
                            
                             <div class="form-row">
                                 <label for="tarif">Tarif</label>
-                                <input name="tarif" type="text" class="titre" id="tarif">
+                                <input name="tarif" type="text" class="titre" id="tarif" value="<?php echo $infoPatisserie ['tarif'] ?>">
                             </div>
 
                             <div class="form-row">
                                 <label for="content">Description</label>
-                                <textarea name="content"class="form-control" id="content" rows="5"maxlength="3000"></textarea>
+                                <textarea name="content"class="form-control" id="content" rows="5"maxlength="3000" ><?php echo $infoPatisserie ['description'] ?></textarea>
                             </div>
 
                             <div class="form-row">
-                                <input class="button" type="submit" value="Ajouter" name="addcontent"id='addcontent'/>
+                                <input class="button" type="submit" value="Ajouter" name="updatecontent"id='updatecontent'/>
                             </div>
 
                         </form>

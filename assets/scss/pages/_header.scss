@@ -17,19 +17,16 @@ header {
 
             a:hover{
                     font-size: 1.1em;
-                    color: $rose2;
-                
-            }
-
+                    color: $rose2;     
+               }
         }
        
         .navbar {
-            background-color: #F9FFC8;
+            background-color: $beige;
         }
 
         .navbar2 {
-            background-color: #F9FFC8;
+            background-color: $beige;
             opacity: 0.5; 
-            position: sticky;
         }
     }

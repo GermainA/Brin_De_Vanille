@@ -1,3 +1,4 @@
+<?php require('views/admin/templates/headback.php');?>
 <?php require('views/admin/templates/header.php');?> 
 
 <html>
@@ -17,7 +18,7 @@
                         <table class="table table-sm">
                             <thead>
                                 <tr>
-                                <th scope="col">#</th>
+                                
                                 <th scope="col">Titre</th>
                                 <th scope="col">Catégorie</th>
                                 <th scope="col">Image</th>
@@ -29,16 +30,22 @@
                              </thead>
 
                             <tbody>
+                                <?php while ($row = $patisseries->fetch(PDO::FETCH_BOTH)) {
+                                    $nomcategorie = $Categorie -> selectIdCategorie2 ($connection, $row ['id']);
+                                    $nomcategorie = $nomcategorie -> fetch();
+                                    $nomcategorie = $Categorie -> selectNomCategorie ($connection, $nomcategorie ['id_categorie']); 
+                                    $nomcategorie = $nomcategorie -> fetch(); ?>
                                 <tr>
-                                <td>1</td>
-                                <td>Macarons</td>
-                                <td>Petits plaisirs</td>
-                                <td>Macarons.png</td>
-                                <td>10 à 30 €</td>
-                                <td>......</td>
-                                <td> <button class="btn" title="Modifier"><i class="fas fa-edit"></i></button> </td>
-                                <td> <button class="btn" title="Supprimer"><i class="fas fa-trash-alt"></i></button> </td>
-                                </tr>
+                                
+                                <td><?php echo $row['titre']; ?></td>
+                                <td><?php echo $nomcategorie['nom']; ?></td>
+                                <td><?php echo $row['image']; ?></td>
+                                <td><?php echo $row['tarif']; ?></td>
+                                <td><?php echo $row['description']; ?></td>
+                                <td> <a href="<?php echo SITE_DIR . "admin021995/editcontent/" . $row ['id']?>"><button class="btn" title="Modifier"><i class="fas fa-edit"></i></button></a> </td>
+                                <td> <a href="<?php echo SITE_DIR . "admin021995/delete/" . $row ['id']?>"><button class="btn" title="Supprimer"><i class="fas fa-trash-alt"></i></button></a> </td>
+                                </tr> 
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>

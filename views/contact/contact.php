@@ -40,27 +40,27 @@
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="nom">Nom</label>
-              <input type="email" class="form-control" id="nom" placeholder="">
+              <input type="text" class="form-control" id="nom" placeholder="" required>
             </div>
             <div class="form-group col-md-6">
               <label for="prenom">Prénom</label>
-              <input type="password" class="form-control" id="prenom" placeholder="">
+              <input type="text" class="form-control" id="prenom" placeholder="" required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="">
+              <input type="email" class="form-control" id="email" placeholder="" required>
             </div>
             <div class="form-group col-md-6">
-              <label for="telephone">Téléphone</label>
-              <input type="password" class="form-control" id="telephone" placeholder="">
+              <label for="number">Téléphone</label>
+              <input type="text" class="form-control" id="number" placeholder="">
             </div>
           </div>
 
           <div class="form-group">
             <label for="exampleFormControlTextarea1">Message</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
           </div>
           <button type="submit" class="btn btn-light">Envoyez</button>
         </form>
