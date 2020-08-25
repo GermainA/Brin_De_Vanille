@@ -1,0 +1,36 @@
+.contact {
+    font-family: 'Sacramento';
+    
+
+    .titrecontact {
+        text-align: center;
+        font-size: 29px;
+        margin: 10px;
+    }
+
+    .liens
+    {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        font-size:28px;
+    }
+        a{
+            color: $rose2;
+        }
+
+        a:hover {
+            font-size: 1.1em;
+            color: $rose2;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-family: 'Sacramento';
+        }
+    label,
+    button {
+        font-size: 28px;
+    }
+    
+}

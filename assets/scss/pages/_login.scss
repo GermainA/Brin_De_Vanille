@@ -1,0 +1,49 @@
+.login {
+
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    .form_row {
+        display: flex;
+        margin-bottom: 1rem;
+        font-family: 'Ubuntu';
+
+        label {
+            order: 1;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            width: 200px;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        input,
+        textarea {
+            order: 2;
+            padding: 0.5rem 1rem;
+            width: 300px;
+            height: 40px;
+            border-radius: 6px;
+
+        }
+
+        & *[required] ~ label:after {
+            content: " *";
+            color: red;
+        }
+  
+    }
+
+    .button {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Ubuntu';
+        border-radius: 6px;
+        padding: 8px;
+        background-color: white;
+    }
+
+}

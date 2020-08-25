@@ -1,0 +1,117 @@
+.admin {
+
+    .navbar {
+        background-color: $beige;
+    }
+
+    img{
+        max-width: 30%;
+        max-height: 30%;
+        margin:auto;
+    } 
+    
+    .h1 {
+        font-size: 30px;
+        font-family: 'Ubuntu';
+        text-align: center;
+        background-color: $beige;
+        opacity: 0.5; 
+        padding-top: 0.4em;
+        padding-bottom: 0.1em;
+        margin: 0;
+        
+    }
+
+    .h2 {
+        color: $rose1;
+        font-size: 25px;
+        font-family: 'Ubuntu';
+        text-align: center;
+        
+        padding-top: 0.4em;
+        padding-bottom: 0.1em;
+        border-top: ridge;
+    }
+
+    .h3 {
+        font-size: 20px;
+        font-family: 'Ubuntu';
+        text-align: center;
+
+        a{
+            color: $rose2;
+
+        }
+
+        a:hover{
+            font-size: 1.1em;
+            color: $rose2;
+        
+        }
+    }
+    
+    .form-connexion {
+        margin-top: 15px;;
+    }
+
+    .ajout {
+
+        margin-left: auto;
+        margin-right: auto;
+
+        .form-row {
+        display: flex;
+        margin-bottom: 1rem;
+        font-family: 'Ubuntu';
+
+        label {
+            
+            display: inline-block;
+            padding: 0.5rem;
+            width: 200px;
+            vertical-align: top;
+
+        }
+
+        input {
+            border-radius: 6px; 
+            width: 300px;
+            height: 40px;
+
+            
+        }
+
+        textarea,
+        select {
+               border-radius: 6px;
+               background-color: white;
+                       
+        }
+
+
+    .button {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Ubuntu';
+        border-radius: 6px;
+        background-color: white;
+        width: 100px;
+    }
+
+       
+    .messageadd {
+
+        font-size: 20px;
+        font-family: 'Ubuntu';
+        text-align: center;
+
+    }
+
+
+        
+    }
+    }
+
+}

@@ -1,0 +1,32 @@
+header {
+    
+        img{
+            max-width: 30%;
+            max-height: 30%;
+            margin:auto;
+        } 
+
+        .menu{
+            margin: 10px;
+            font-family: 'Ubuntu';
+
+            a{
+                color: black;
+            }
+            
+
+            a:hover{
+                    font-size: 1.1em;
+                    color: $rose2;     
+               }
+        }
+       
+        .navbar {
+            background-color: $beige;
+        }
+
+        .navbar2 {
+            background-color: $beige;
+            opacity: 0.5; 
+        }
+    }
